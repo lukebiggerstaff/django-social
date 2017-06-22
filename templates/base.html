@@ -18,11 +18,10 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 
-    <link rel="stylesheet" href="{% static 'simplesocial/css/master.css' %}">
+    <link rel="stylesheet" href="{% static 'css/master.css' %}">
 
   </head>
   <body>
-
     <nav class="navbar mynav" role='navigation' id='navbar'>
       <div class="container">
         <a class="navbar-brand mynav" href="{% url 'home' %}">Star Social</a>
@@ -41,11 +40,13 @@
         </ul>
       </div>
     </nav>
-
-    <div class="container mycontent">
-      {% block content %}
-        
-      {% endblock content %}
-    </div>
+      <div class="container mycontent">
+        {% block content %}
+          
+        {% endblock content %}
+      </div>
+    <canvas id='canvas'>
+    </canvas>
   </body>
+  <script src="{% static 'js/master.js' %}"></script>
 </html>
